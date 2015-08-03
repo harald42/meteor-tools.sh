@@ -26,28 +26,6 @@ if [ -d ".meteor/meteorite" ]; then
 fi
 
 case "$1" in
-setup )
-echo Preparing the server...
-echo Get some coffee, this will take a while.
-ssh $SSH_OPT $SSH_HOST DEBIAN_FRONTEND=noninteractive 'sudo -E bash -s' > /dev/null 2>&1 <<'ENDSSH'
-apt-get update
-apt-get install -y python-software-properties
-apt-get install -y build-essential nodejs mongodb
-# todo remove nodejs and install node version 1.36
-npm install -g forever
-cd /tmp
-wget https://nodejs.org/dist/v0.10.36/node-v0.10.36-linux-x86.tar.gz
-tar xfz node-v0.10.36-linux-x86.tar.gz
-rm /usr/bin/nodejs
-cp -rf node-v0.10.36-linux-x86/bin/* /usr/bin
-cp -rf node-v0.10.36-linux-x86/include/* /usr/include
-cp -rf node-v0.10.36-linux-x86/lib/* /usr/lib
-cp -rf node-v0.10.36-linux-x86/share/* /usr/share
-rm node-v0.10.36-linux-x86.tar.gz
-rm -r node-v0.10.36-linux-x86
-ENDSSH
-echo Done. You can now deploy your app.
-;;
 deploy )
 echo Deploying...
 $METEOR_CMD bundle bundle.tgz > /dev/null 2>&1 &&
@@ -66,17 +44,6 @@ rm /tmp/bundle.tgz
 pushd bundle/programs/server/node_modules
 popd
 chown -R www-data:www-data bundle
-patch -u bundle/programs/server/packages/webapp.js <<'ENDPATCH'
-@@ -447,6 +447,8 @@ var runWebAppServer = function () {
-     httpServer.listen(localPort, localIp, Meteor.bindEnvironment(function() {                              // 428
-       if (argv.keepalive || true)                                                                          // 429
-         console.log("LISTENING"); // must match run.js                                                     // 430
-+      process.setgid('www-data');
-+      process.setuid('www-data');
-       var port = httpServer.address().port;                                                                // 431
-       var proxyBinding;                                                                                    // 432
-                                                                                                            // 433
-ENDPATCH
 cd $APP_DIR/bundle/programs/server/
 npm install
 cd $APP_DIR
@@ -91,7 +58,6 @@ cat <<'ENDCAT'
 
 Available actions:
 
-  setup   - Install a meteor environment on a fresh Debian x64  server
   deploy  - Deploy the app to the server
 ENDCAT
 ;;
