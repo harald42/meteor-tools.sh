@@ -1,6 +1,6 @@
 #!/bin/sh
 
-apt-get install -y curl aptitude git mc
+apt-get install -y curl aptitude git mc sudo
 apt-get install -y python-software-properties
 apt-get install -y build-essential mongodb
 
