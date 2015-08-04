@@ -34,10 +34,9 @@ PermitRootLogin yes
 /etc/init.d/ssh restart
 
 --------------------------------
-### Install the server:
+### Install dependencies for Meteor the server:
 
 ```
-copy the meteor-debianx64-setup.sh to your server
 ./meteor-debian64-setup.sh
 ```
 
