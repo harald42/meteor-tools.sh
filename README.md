@@ -1,4 +1,4 @@
-# Meteor.sh
+# Meteor-tools.sh
 
 ## What?
 
@@ -8,7 +8,7 @@ Meteor-tools.sh is a simple Shellscript to setup a Meteor server and deploy Mete
 
 Because deploying to custom servers should be as simple as everything else in Meteor.
 
-## Awesome, tell me what to do.
+
 
 ### Before we start:
 
@@ -16,7 +16,8 @@ Meteor.sh assumes that you have some kind of Debian-Server and root access to it
 
 ### Example:
 
-* meteor deploy server
+#### Debian meteor deploy server
+
 * setup debian minimal 64 Bit with root password
 * etc/apt/sources.list  #remove cd-rom
 
@@ -33,8 +34,7 @@ PermitRootLogin yes
 
 /etc/init.d/ssh restart
 
---------------------------------
-### Install dependencies for Meteor the server:
+Install dependencies for Meteor the server:
 
 ```
 ./meteor-debian64-setup.sh
