@@ -49,7 +49,7 @@ Meteor.sh assumes that you have some kind of Debian-Server and root access to it
 
 ### Example:
 
-#### Debian meteor deploy server
+#### Debian-x64 meteor deploy server
 
 * setup debian minimal 64 Bit with root password
 * etc/apt/sources.list  #remove cd-rom
