@@ -14,7 +14,20 @@ Move the `meteor.sh` file into your project dir and change the `APP_HOST` variab
 
 Meteor.sh will try to SSH as root to `APP_HOST`.
 
-### Before we start:
+### Deploy your app:
+
+```
+./meteor.sh deploy
+```
+
+Deploys your app to the server and starts it as a service.
+
+## Meteorite support
+
+Meteor.sh will detect if your project uses Meteorite and use it accordingly.
+
+
+### Before we deploy:
 
 Meteor.sh assumes that you have some kind of Debian-Server and root access to it.
 
@@ -58,14 +71,3 @@ If your server happens to be an Amazon EC2 instance, uncomment the `EC2_PEM_FILE
 
 
 
-### Deploy your app:
-
-```
-./meteor.sh deploy
-```
-
-Deploys your app to the server and starts it as a service.
-
-## Meteorite support
-
-Meteor.sh will detect if your project uses Meteorite and use it accordingly.
