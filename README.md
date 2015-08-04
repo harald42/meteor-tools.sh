@@ -42,6 +42,7 @@ copy the meteor-debianx64-setup.sh to your server
 ```
 
 This will install Node, Mongo and other dependencies for Meteor and Meteor.sh on `APP_HOST`.
+
 ----
 
 Move the `meteor.sh` file into your project dir and change the `APP_HOST` variable.
