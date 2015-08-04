@@ -23,6 +23,10 @@ Install the latest official Meteor-Kitchen release from your terminal:
 ```
 curl http://www.meteorkitchen.com/install | /bin/sh
 ```
+
+Install the latest official Meteor-Tools release from your terminal:
+
+```
 apt-get install git
 git clone https://github.com/harald42/meteor-tools.sh.git
 ```
