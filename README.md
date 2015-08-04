@@ -10,8 +10,6 @@ Because deploying to custom servers should be as simple as everything else in Me
 
 ### Developer PC
 
-Install Meteor:
-
 On OS X or Linux?
 
 Install the latest official Meteor release from your terminal:
@@ -20,6 +18,10 @@ Install the latest official Meteor release from your terminal:
 curl https://install.meteor.com/ | sh
 ```
 
+Install the latest official Meteor-Kitchen release from your terminal:
+
+```
+curl http://www.meteorkitchen.com/install | /bin/sh
 ```
 apt-get install git
 git clone https://github.com/harald42/meteor-tools.sh.git
