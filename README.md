@@ -21,23 +21,21 @@ Meteor.sh assumes that you have some kind of Debian-Server and root access to it
 * setup debian minimal 64 Bit with root password
 * etc/apt/sources.list  #remove cd-rom
 
----
+
+```
 apt-get install ssh git
 git clone https://github.com/harald42/meteor-tools.sh.git
----
-
----
 nano /etc/ssh/sshd_config
----
+```
 
 FROM:
 PermitRootLogin without-password
 TO:
 PermitRootLogin yes
 
----
+```
 /etc/init.d/ssh restart
----
+```
 
 Install dependencies for Meteor the server:
 
