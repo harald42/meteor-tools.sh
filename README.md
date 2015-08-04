@@ -8,7 +8,12 @@ Meteor-tools.sh is a simple Shellscript to setup a Meteor server and deploy Mete
 
 Because deploying to custom servers should be as simple as everything else in Meteor.
 
-### Client PC
+### Developer PC
+
+```
+apt-get install git
+git clone https://github.com/harald42/meteor-tools.sh.git
+```
 
 Move the `meteor.sh` file into your project dir and change the `APP_HOST` variable.
 
