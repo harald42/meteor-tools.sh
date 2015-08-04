@@ -34,6 +34,15 @@ PermitRootLogin yes
 /etc/init.d/ssh restart
 
 --------------------------------
+### Install the server:
+
+```
+copy the meteor-debianx64-setup.sh to your server
+./meteor-debian64-setup.sh
+```
+
+This will install Node, Mongo and other dependencies for Meteor and Meteor.sh on `APP_HOST`.
+----
 
 Move the `meteor.sh` file into your project dir and change the `APP_HOST` variable.
 
@@ -43,14 +52,7 @@ Meteor.sh will try to SSH as root to `APP_HOST`.
 
 If your server happens to be an Amazon EC2 instance, uncomment the `EC2_PEM_FILE` variable and point it to your pem file. Meteor.sh will then do the right things for those instances.
 
-### Install the server:
 
-```
-copy the meteor-debianx64-setup.sh to your server
-./meteor-debian64-setup.sh
-```
-
-This will install Node, Mongo and other dependencies for Meteor and Meteor.sh on `APP_HOST`.
 
 ### Deploy your app:
 
