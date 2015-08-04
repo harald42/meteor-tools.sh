@@ -27,11 +27,6 @@ Meteor.sh will try to SSH as root to `APP_HOST`.
 
 Deploys your app to the server and starts it as a service.
 
-## Meteorite support
-
-Meteor.sh will detect if your project uses Meteorite and use it accordingly.
-
-
 ### Before we deploy:
 
 Meteor.sh assumes that you have some kind of Debian-Server and root access to it.
@@ -74,5 +69,6 @@ This will install Node, Mongo and other dependencies for Meteor and Meteor.sh on
 
 If your server happens to be an Amazon EC2 instance, uncomment the `EC2_PEM_FILE` variable and point it to your pem file. Meteor.sh will then do the right things for those instances.
 
+## Meteorite support
 
-
+Meteor.sh will detect if your project uses Meteorite and use it accordingly.
