@@ -14,11 +14,11 @@ Because deploying to custom servers should be as simple as everything else in Me
 
 Meteor.sh assumes that you have some kind of Debian-Server and root access to it.
 
-Example:
----------------------------------------------------------
-# meteor deploy server setup
-#debian minimal 64 Bit with root password
-# etc/apt/sources.list  #remove cd-rom
+### Example:
+
+* meteor deploy server
+* setup debian minimal 64 Bit with root password
+* etc/apt/sources.list  #remove cd-rom
 
 apt-get install ssh git
 git clone https://github.com/harald42/meteor-tools.sh.git
@@ -30,7 +30,7 @@ TO:
 PermitRootLogin yes
 
 /etc/init.d/ssh restart
-----------------------------------------------------------
+
 
 Move the `meteor.sh` file into your project dir and change the `APP_HOST` variable.
 
