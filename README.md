@@ -21,7 +21,9 @@ Meteor.sh assumes that you have some kind of Debian-Server and root access to it
 * etc/apt/sources.list  #remove cd-rom
 
 apt-get install ssh git
+
 git clone https://github.com/harald42/meteor-tools.sh.git
+
 nano /etc/ssh/sshd_config
 
 FROM:
@@ -31,6 +33,7 @@ PermitRootLogin yes
 
 /etc/init.d/ssh restart
 
+--------------------------------
 
 Move the `meteor.sh` file into your project dir and change the `APP_HOST` variable.
 
