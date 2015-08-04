@@ -8,7 +8,11 @@ Meteor-tools.sh is a simple Shellscript to setup a Meteor server and deploy Mete
 
 Because deploying to custom servers should be as simple as everything else in Meteor.
 
+### Client PC
 
+Move the `meteor.sh` file into your project dir and change the `APP_HOST` variable.
+
+Meteor.sh will try to SSH as root to `APP_HOST`.
 
 ### Before we start:
 
@@ -47,11 +51,6 @@ This will install Node, Mongo and other dependencies for Meteor and Meteor.sh on
 
 ----
 
-### Client PC
-
-Move the `meteor.sh` file into your project dir and change the `APP_HOST` variable.
-
-Meteor.sh will try to SSH as root to `APP_HOST`.
 
 #### A note on EC2 support:
 
