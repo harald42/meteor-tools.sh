@@ -1,7 +1,5 @@
 # Meteor-tools.sh
 
-## What?
-
 Meteor-tools.sh is a simple Shellscript to setup a Meteor server and deploy Meteor apps to it.
 
 ## Why?
