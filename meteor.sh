@@ -46,6 +46,8 @@ popd
 chown -R www-data:www-data bundle
 cd $APP_DIR/bundle/programs/server/
 npm install
+cd $APP_DIR/bundle/programs/server/npm/npm-bcrypt/node_modules/
+npm install bcrypt
 cd $APP_DIR
 forever start bundle/main.js
 popd
