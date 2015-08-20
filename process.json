@@ -1,0 +1,15 @@
+{
+  "apps": [
+    {
+      "name": "MyMeteorApp",
+      "script": "./main.js",
+      "log_date_format": "YYYY-MM-DD",
+      "exec_mode": "fork_mode",
+      "env": {
+        "PORT": 4000,
+        "MONGO_URL": "mongodb://localhost:27017/meteor",
+        "ROOT_URL": "https://beta.example.com/"
+      }
+    }
+  ]
+}
